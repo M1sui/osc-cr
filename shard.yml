@@ -1,0 +1,9 @@
+name: osc-cr
+version: 0.1.0
+
+authors:
+  - InstanceMethod
+
+crystal: '>= 1.16.3'
+
+license: MIT
