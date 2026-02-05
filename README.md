@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      osc-cr:
-       github: your-github-user/osc-cr
+       github: M1sui/osc-cr
    ```
 
 2. Run `shards install`
