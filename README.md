@@ -1,6 +1,7 @@
 # osc-cr
 
-TODO: Write a description here
+Crystal言語でOSC通信を行うためのシンプルなフレームワークです。
+A simple framework for OSC communication in the Crystal language.
 
 ## Installation
 
@@ -18,9 +19,11 @@ TODO: Write a description here
 See `your-project/lib/example/OSC-Example.cr` for details.
 
 ```crystal
+# 1. Initialize
 require "osc-cr"
 osc = OSC.new("127.0.0.1", 9000, 9001)
 
+# 2. Receive Event
 osc.message(path: "/test/aba") { |event|
 	puts(event.data)      #-> OSC argument - Value
 	puts(event.data.path) #-> OSC Message - "/test/aba"
@@ -30,8 +33,10 @@ osc.message(path: "/test/aba") { |event|
 	osc.sendb("/test/aba/respond".true)
 }
 
+# 3. Recieve Server Run
 osc.run()
 
+# 4. Other Process
 osc.sendb("/test/hoge", true) # -> Bool
 osc.sendi("/test/fuga", 123)  # -> Int
 osc.sendf("/test/piyo", 1.23) # -> Float
@@ -41,11 +46,8 @@ loop {
 }
 ```
 
-TODO: Write usage instructions here
+The order must be in accordance with the numbering.
 
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
