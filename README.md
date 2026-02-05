@@ -1,6 +1,5 @@
 # osc-cr
 
-Crystal言語でOSC通信を行うためのシンプルなフレームワークです。
 A simple framework for OSC communication in the Crystal language.
 
 ## Installation
