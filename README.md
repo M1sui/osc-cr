@@ -25,6 +25,7 @@ osc.message(path: "/test/aba") { |event|
 	puts(event.data)      #-> OSC argument - Value
 	puts(event.data.path) #-> OSC Message - "/test/aba"
 	puts(event.data.type) #-> Bool | Int32 | Float32 | String | Nil
+
 	# Send can be used anywhere after initialization
 	osc.sendb("/test/aba/respond".true)
 }
